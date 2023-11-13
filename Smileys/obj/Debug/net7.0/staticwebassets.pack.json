@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\brian\\source\\repos\\Aflevering2\\Smileys\\wwwroot\\images\\smiley1.png",
+      "PackagePath": "staticwebassets\\images\\smiley1.png"
+    },
+    {
+      "Id": "C:\\Users\\brian\\source\\repos\\Aflevering2\\Smileys\\wwwroot\\images\\smiley2.png",
+      "PackagePath": "staticwebassets\\images\\smiley2.png"
+    },
+    {
+      "Id": "C:\\Users\\brian\\source\\repos\\Aflevering2\\Smileys\\wwwroot\\images\\smiley3.png",
+      "PackagePath": "staticwebassets\\images\\smiley3.png"
+    },
+    {
+      "Id": "C:\\Users\\brian\\source\\repos\\Aflevering2\\Smileys\\wwwroot\\images\\smiley4.png",
+      "PackagePath": "staticwebassets\\images\\smiley4.png"
+    },
+    {
       "Id": "C:\\Users\\brian\\source\\repos\\Aflevering2\\Smileys\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
