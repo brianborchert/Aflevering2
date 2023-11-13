@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Smileys.Models.Company>
+﻿@model Smileys.Models.CompanySmileyViewModel
 
 @{
     ViewData["Title"] = "Virksomheder og smileys";
@@ -13,25 +13,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Companies![0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Street)
+                @Html.DisplayNameFor(model => model.Companies![0].Street)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HouseNumber)
+                @Html.DisplayNameFor(model => model.Companies![0].HouseNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.City)
+                @Html.DisplayNameFor(model => model.Companies![0].City)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Smileys)
+                @Html.DisplayNameFor(model => model.Companies![0].Smileys)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Companies!) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)

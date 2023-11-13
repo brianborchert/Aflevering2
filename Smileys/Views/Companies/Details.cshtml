@@ -53,6 +53,25 @@
         </dd>
     </dl>
 </div>
+
+
+<div>
+    <div>
+        @Html.DisplayFor(model => model.Smileys[0])
+    </div>
+    <div>
+        <img src="/images/smiley"+1+".png" />
+    </div>
+</div>
+
+<div>
+    <img src="/images/smiley1.png" />
+    <img src="/images/smiley2.png" />
+    <img src="/images/smiley3.png" />
+    <img src="/images/smiley4.png" />
+</div>
+
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Redigér</a> |
     <a asp-action="Index">Tilbage til oversigten</a>
