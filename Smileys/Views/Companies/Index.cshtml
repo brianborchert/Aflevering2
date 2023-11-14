@@ -1,11 +1,9 @@
 ﻿@model Smileys.Models.CompanySmileyViewModel
-
 @{
     ViewData["Title"] = "Virksomheder og smileys";
 }
 
 <h2>Liste over virksomheder og smileys</h2>
-
 <p>
     <a asp-action="Create">Ny registrering</a>
 </p>
@@ -53,7 +51,11 @@
                 @Html.DisplayFor(modelItem => item.Smileys)
             </td>
             <td>
-                <img src="@Html.DisplayFor(modelItem => Model.Urls![0])" />
+                <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][0])" />
+                <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][1])" />
+                <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][2])" />
+                <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][3])" />
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |

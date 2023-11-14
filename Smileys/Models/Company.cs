@@ -24,6 +24,7 @@ namespace Smileys.Models
         [Display(Name = "By")]
         public string City { get; set; }
 
+        // TODO: Only accepts numbers 1,2,3,4
         [Display(Name = "Smiley'er")]
         public string Smileys { get; set; }
     }
