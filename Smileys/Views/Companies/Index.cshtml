@@ -27,7 +27,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.Companies![0].Smileys)
             </th>
-            <th></th>
+            <th>
+                Nuværende smiley
+            </th>
+            <th>
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -47,6 +51,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Smileys)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => Model.Urls![0])" />
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |

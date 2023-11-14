@@ -29,6 +29,10 @@ namespace Smileys.Controllers
 
             List<Company> companies = await _context.Company.ToListAsync();
             List<string> urls = new List<string>().ToList();
+            urls.Add("/images/smiley1.png");
+            urls.Add("/images/smiley2.png");
+            urls.Add("/images/smiley3.png");
+            urls.Add("/images/smiley4.png");
 
             var companySmileyViewModel = new CompanySmileyViewModel
             {
