@@ -24,7 +24,7 @@ namespace Smileys.Controllers
         {
             if (_context.Company == null)
             {
-                return Problem("Entity set 'SmileysContext.Company'  is null.");
+                return Problem("Entity set 'SmileysContext.Company' is null.");
             }
 
             List<Company> companies = await _context.Company.ToListAsync();
@@ -32,27 +32,6 @@ namespace Smileys.Controllers
 
             return View(companySmileyViewModel);
         }
-
-        // VERSION 2
-        //// GET: Companies
-        //public async Task<IActionResult> Index()
-        //{
-        //    if (_context.Company == null)
-        //    {
-        //        return Problem("Entity set 'SmileysContext.Company'  is null.");
-        //    }
-        //    List<Company> companies = await _context.Company.ToListAsync();
-        //    return View(companies);
-        //}
-
-        // VERSION 1
-        //// GET: Companies
-        //public async Task<IActionResult> Index()
-        //{
-        //    return _context.Company != null ?
-        //                View(await _context.Company.ToListAsync()) :
-        //                Problem("Entity set 'SmileysContext.Company'  is null.");
-        //}
 
         // GET: Companies/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -69,7 +48,10 @@ namespace Smileys.Controllers
                 return NotFound();
             }
 
-            return View(company);
+            List<Company> companies = new List<Company> { company };
+            var companySmileyViewModel = new CompanySmileyViewModel(companies);
+
+            return View(companySmileyViewModel);
         }
 
         // GET: Companies/Create

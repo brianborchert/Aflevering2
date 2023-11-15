@@ -29,6 +29,7 @@
                 Nuværende smiley
             </th>
             <th>
+                3 foregående smileys
             </th>
         </tr>
     </thead>
@@ -52,10 +53,11 @@
             </td>
             <td>
                 <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][0])" />
+            </td>
+            <td>
                 <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][1])" />
                 <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][2])" />
                 <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][3])" />
-                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |

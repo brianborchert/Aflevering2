@@ -24,7 +24,7 @@ namespace Smileys.Models
         [Display(Name = "By")]
         public string City { get; set; }
 
-        // TODO: Only accepts numbers 1,2,3,4
+        // First char in the string is newest smiley, the second char is the smiley received just before the newest smiley etc.
         [Display(Name = "Smiley'er")]
         public string Smileys { get; set; }
     }

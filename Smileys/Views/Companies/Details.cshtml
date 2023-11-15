@@ -1,78 +1,75 @@
-﻿@model Smileys.Models.Company
+﻿@model Smileys.Models.CompanySmileyViewModel
 
 @{
     ViewData["Title"] = "Detaljer";
 }
 
 <h1>Detaljer</h1>
-
 <div>
     <hr />
     <dl class="row">
+@foreach (var item in Model.Companies!) {
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Companies![0].Name)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(modelItem => item.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CVR)
+            @Html.DisplayNameFor(model => model.Companies![0].CVR)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CVR)
+            @Html.DisplayFor(modelItem => item.CVR)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Street)
+            @Html.DisplayNameFor(model => model.Companies![0].Street)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Street)
+            @Html.DisplayFor(modelItem => item.Street)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HouseNumber)
+            @Html.DisplayNameFor(model => model.Companies![0].HouseNumber)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HouseNumber)
+            @Html.DisplayFor(modelItem => item.HouseNumber)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ZipCode)
+            @Html.DisplayNameFor(model => model.Companies![0].ZipCode)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ZipCode)
+            @Html.DisplayFor(modelItem => item.ZipCode)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.City)
+            @Html.DisplayNameFor(model => model.Companies![0].City)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.City)
+            @Html.DisplayFor(modelItem => item.City)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Smileys)
+            @Html.DisplayNameFor(model => model.Companies![0].Smileys)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Smileys)
+            @Html.DisplayFor(modelItem => item.Smileys)
         </dd>
+        <dt class="col-sm-2">
+            Nuværende smiley
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][0])" />
+        </dd>
+        <dt class="col-sm-2">
+            3 foregående smileys
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][1])" />
+            <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][2])" />
+            <img src="@Html.DisplayFor(modelItem => Model.CompanyIDsAndSmileyPaths![item.Id][3])" />
+        </dd>
+}
     </dl>
 </div>
 
-
 <div>
-    <div>
-        @Html.DisplayFor(model => model.Smileys[0])
-    </div>
-    <div>
-        <img src="/images/smiley"+1+".png" />
-    </div>
-</div>
-
-<div>
-    <img src="/images/smiley1.png" />
-    <img src="/images/smiley2.png" />
-    <img src="/images/smiley3.png" />
-    <img src="/images/smiley4.png" />
-</div>
-
-
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Redigér</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Companies![0].Id">Redigér</a> |
     <a asp-action="Index">Tilbage til oversigten</a>
 </div>
